@@ -46,6 +46,9 @@
         .navbar-text {
           margin-top: 0;
         }
+        #space-rep {
+          margin-bottom: 6px;
+        }
         .input-group-addon, .space-replacement {
           margin-bottom: 5px;
         }
