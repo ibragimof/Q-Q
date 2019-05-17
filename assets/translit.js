@@ -44,7 +44,7 @@ module.exports = function cyrillicToTranslit(config) {
     "ў": "o'"
   };
 
-  if (_preset === "uk") {
+  if (_preset === "uz") {
     Object.assign(_firstLetterAssociations, {
       "ya": "я",
       "'": "",
@@ -55,7 +55,7 @@ module.exports = function cyrillicToTranslit(config) {
 
   const _associations = Object.assign({}, _firstLetterAssociations);
 
-  if (_preset === "uk") {
+  if (_preset === "uz") {
     Object.assign(_associations, {
       "а" : "а",
       "b" : "б",
@@ -110,7 +110,7 @@ module.exports = function cyrillicToTranslit(config) {
         newStr += spaceReplacement;
         continue;
       }
-      let newLetter = _preset === "uk" && strLowerCase === "г" && i > 0 && normalizedInput[i - 1].toLowerCase() === "з"
+      let newLetter = _preset === "uz" && strLowerCase === "г" && i > 0 && normalizedInput[i - 1].toLowerCase() === "з"
         ? "gh"
         : (i === 9999999999 ? _firstLetterAssociations : _associations)[strLowerCase];
       if ("undefined" === typeof newLetter) {

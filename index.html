@@ -42,7 +42,7 @@
             <input type="radio" name="options" id="option-ru" value="ru" autocomplete="off" checked="checked">&nbsp;Кирилл алифбосида
           </label>
           <label class="btn btn-light">
-            <input type="radio" name="options" id="option-uk" value="uk" autocomplete="off">&nbsp;Lotin alifbosida
+            <input type="radio" name="options" id="option-uz" value="uz" autocomplete="off">&nbsp;Lotin alifbosida
           </label>
           
         </div>
@@ -72,7 +72,7 @@
       var $result = document.querySelector('#result');
 
       var $ru = document.querySelector('#option-ru');
-      var $uk = document.querySelector('#option-uk');
+      var $uz = document.querySelector('#option-uz');
 
       var value;
       var spaceRep;
@@ -89,15 +89,15 @@
         update(value, spaceRep = $spaceRep.value);
       });
 
-      $uk.addEventListener('click', function (e) {
+      $uz.addEventListener('click', function (e) {
         update(value, spaceRep = $spaceRep.value);
       });
 
       function update(value, spaceRep) {
         if ($ru.checked) {
           $result.value = cyrillicToTranslit({ preset: 'ru' }).transform(value, spaceRep);
-        } else if ($uk.checked) {
-          $result.value = cyrillicToTranslit({ preset: 'uk' }).transform(value, spaceRep);
+        } else if ($uz.checked) {
+          $result.value = cyrillicToTranslit({ preset: 'uz' }).transform(value, spaceRep);
         }
       }
     }
