@@ -1,0 +1,76 @@
+
+    body  {
+        background-color: #bbb;
+        width: 95%;
+        margin: 2% auto;
+
+    }
+    .space-replacement {
+        margin-top: 20px;
+      }
+    
+      #source,
+      #result {
+        height: 40vh;
+        min-height: 100px;
+      }
+      .navbar-header {
+          color: #f1f1f1;
+          text-align: center;
+          margin: 0 auto;
+          padding-right: 0px;
+      }
+      div.navbar-brand {
+          padding-right: 0px;
+      }
+      .input-group-addon, .space-replacement {
+        color: beige;
+      }
+      .btn {
+          margin: 2px 6px;;
+      }
+      .btn-primary{
+          margin: 2px;
+      }
+      #space-rep {
+        margin-left: 10px;
+      }
+      @media (max-width: 767px) {
+        .navbar-brand {
+          float: none;
+          padding-bottom: 0;
+        }
+  
+        .navbar-text {
+          margin-top: 0;
+        }
+      }
+
+      #source {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        font-size: 1.2em;
+        text-indent: 3%;
+      }
+      textarea {
+        font-size: 2em;
+        padding: 4vh;
+      }
+      #result {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        line-height: 1.6rem;
+        font-weight: 600;
+        text-indent: 5%;
+        font-size: 1.2rem;
+      }
+
+      input[type=text] {
+        display: block;
+        margin-right: 30px;
+        width: 30px;
+        margin: 2px 6px;
+      }
+
+      h1 {
+        color: black;
+      }

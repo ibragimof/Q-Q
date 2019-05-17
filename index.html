@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Q — Қ</title>
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/favicon-andro-md.png">
+  <link rel="stylesheet" href="/assets/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="/assets/original.css">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+          <h1>
+            Кирилл&nbsp;&nbsp;<i class="fa fa-exchange-alt"></i>&nbsp;&nbsp;Lotin
+          </h1>
+        </div>
+        <br>
+        <p class="navbar-text">
+          Матнни бошқа алифбога ўгириш
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main container-fluid">
+    <div class="row">
+      <div class="column col-sm-6">
+        <textarea class="form-control shadow-textarea" id="source" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&#xf303;"></textarea>
+
+        <div class="space-replacement input-group">
+          <span class="input-group-addon">Киритилаётган матн:</span>
+          <label class="btn btn-light">
+            <input type="radio" name="options" id="option-ru" value="ru" autocomplete="off" checked="checked">&nbsp;Кирилл алифбосида
+          </label>
+          <label class="btn btn-light">
+            <input type="radio" name="options" id="option-uk" value="uk" autocomplete="off">&nbsp;Lotin alifbosida
+          </label>
+          
+        </div>
+
+        <div class="space-replacement input-group">
+          <span class="input-group-addon">Бўш жой ўрнига:</span>
+          <input type="text" class="form-control text-center" id="space-rep" placeholder="[SPACE] ўрнига:">
+          <label class="btn btn-info" type="radio" name="clipboard" id="copier" value="copy" onclick="clipboard(document.getElementById('result').innerHTML)">
+              Натижани кўчириб олиш
+            </label>
+        </div>
+      </div>
+      <div class="column col-sm-6">
+        <textarea class="form-control" id="result" readonly placeholder="Натижа:"></textarea>
+      </div>
+    </div>
+  </div>
+  
+  <script async src="/assets/humane.min.js"></script>
+  <script>
+    // CommonJS Workaround
+    var module = {};
+
+    function init(cyrillicToTranslit) {
+      var $source = document.querySelector('#source');
+      var $spaceRep = document.querySelector('#space-rep');
+      var $result = document.querySelector('#result');
+
+      var $ru = document.querySelector('#option-ru');
+      var $uk = document.querySelector('#option-uk');
+
+      var value;
+      var spaceRep;
+
+      $source.addEventListener('input', function (e) {
+        update(value = e.target.value, spaceRep);
+      });
+
+      $spaceRep.addEventListener('input', function (e) {
+        update(value, spaceRep = e.target.value);
+      });
+
+      $ru.addEventListener('click', function (e) {
+        update(value, spaceRep = $spaceRep.value);
+      });
+
+      $uk.addEventListener('click', function (e) {
+        update(value, spaceRep = $spaceRep.value);
+      });
+
+      function update(value, spaceRep) {
+        if ($ru.checked) {
+          $result.value = cyrillicToTranslit({ preset: 'ru' }).transform(value, spaceRep);
+        } else if ($uk.checked) {
+          $result.value = cyrillicToTranslit({ preset: 'uk' }).transform(value, spaceRep);
+        }
+      }
+    }
+    
+    function clipboard(){
+      var string = document.getElementById("result");
+      string.select();
+      document.execCommand("copy");
+      document.execCommand("unselect");
+      humane.log("Натижа кўчириб олинди.");
+      };
+  </script>
+  <script src="/assets/translit.js"
+  onload="init(module.exports)"></script>
+</body>
+
+</html>
