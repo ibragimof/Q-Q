@@ -83,7 +83,7 @@ module.exports = function cyrillicToTranslit(config) {
       "t" :  "т",
       "u" :  "у",
       "f" :  "ф",
-      "h" :  "х",
+      "h" :  "ҳ",
       "c" :  "ц",
       "ch" : "ч", 
       "sh" : "ш",
