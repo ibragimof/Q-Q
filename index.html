@@ -39,7 +39,7 @@
         <div class="space-replacement input-group">
           <span class="input-group-addon">Киритилаётган матн:</span>
           <label class="btn btn-light">
-            <input type="radio" name="options" id="option-ru" value="ru" autocomplete="off" checked="checked">&nbsp;Кирилл алифбосида
+            <input type="radio" name="options" id="option-uzb" value="uzb" autocomplete="off" checked="checked">&nbsp;Кирилл алифбосида
           </label>
           <label class="btn btn-light">
             <input type="radio" name="options" id="option-uz" value="uz" autocomplete="off">&nbsp;Lotin alifbosida
@@ -71,7 +71,7 @@
       var $spaceRep = document.querySelector('#space-rep');
       var $result = document.querySelector('#result');
 
-      var $ru = document.querySelector('#option-ru');
+      var $uzb = document.querySelector('#option-uzb');
       var $uz = document.querySelector('#option-uz');
 
       var value;
@@ -85,7 +85,7 @@
         update(value, spaceRep = e.target.value);
       });
 
-      $ru.addEventListener('click', function (e) {
+      $uzb.addEventListener('click', function (e) {
         update(value, spaceRep = $spaceRep.value);
       });
 
@@ -94,8 +94,8 @@
       });
 
       function update(value, spaceRep) {
-        if ($ru.checked) {
-          $result.value = cyrillicToTranslit({ preset: 'ru' }).transform(value, spaceRep);
+        if ($uzb.checked) {
+          $result.value = cyrillicToTranslit({ preset: 'uzb' }).transform(value, spaceRep);
         } else if ($uz.checked) {
           $result.value = cyrillicToTranslit({ preset: 'uz' }).transform(value, spaceRep);
         }

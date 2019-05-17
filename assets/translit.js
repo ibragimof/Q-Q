@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 module.exports = function cyrillicToTranslit(config) {
-  const _preset = config ? config.preset : "ru";
+  const _preset = config ? config.preset : "uzb";
 
   const _firstLetterAssociations = {
     "а": "a",
