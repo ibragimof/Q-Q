@@ -54,15 +54,15 @@
           <label class="btn btn-light">
             <input type="radio" name="options" id="option-uz" value="uz" autocomplete="off">&nbsp;Lotin alifbosida
           </label>
-          
+          <label class="btn btn-info" type="radio" name="clipboard" id="copier" value="copy" onclick="clipboard(document.getElementById('result').innerHTML)">
+              Натижани кўчириб олиш
+            </label>
         </div>
 
         <div class="space-replacement input-group">
           <span class="input-group-addon">Бўш жой ўрнига:</span>
           <input type="text" class="form-control text-center" id="space-rep" placeholder="[SPACE] ўрнига:">
-          <label class="btn btn-info" type="radio" name="clipboard" id="copier" value="copy" onclick="clipboard(document.getElementById('result').innerHTML)">
-              Натижани кўчириб олиш
-            </label>
+          
         </div>
       </div>
       <div class="column col-sm-6">
