@@ -46,6 +46,9 @@
         .navbar-text {
           margin-top: 0;
         }
+        .input-group-addon, .space-replacement {
+          margin-bottom: 5px;
+        }
         #source,
         #result {
         height: 15vh;
