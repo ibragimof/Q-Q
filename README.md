@@ -1,6 +1,8 @@
 # Q — Қ
 
-[Demo page](https://greybax.github.io/cyrillic-to-translit-js)
+The Transliterate app for extended cyrillic characters in ex. uzbek alphabet.
+Some bugs in reverse mode (english letters to cyrillic) has detected.
+[Try it now](https://ibragimof.github.io/Q-Q/)
 
 ## Install
 
