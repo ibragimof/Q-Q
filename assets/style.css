@@ -40,10 +40,17 @@
           float: none;
           padding-bottom: 0;
         }
-  
+        span.input-group-addon, span.space-replacement {
+          display: none;
+        }
         .navbar-text {
           margin-top: 0;
         }
+        #source,
+        #result {
+        height: 15vh;
+        min-height: 60px;
+      }
       }
 
       #source {
