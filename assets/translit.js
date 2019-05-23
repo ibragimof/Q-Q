@@ -7,12 +7,11 @@ module.exports = function cyrillicToTranslit(config) {
     "а": "a",
     "б": "b",
     "в": "v",
-    "ғ": "g'",
+    "ғ": "ǵ",
     "г": "g",
     "д": "d",
-    "е": "e",
     "ё": "yo",
-    "є": "ye",
+    "е": "ye",
     "ж": "j",
     "з": "z",
     "и": "i",
@@ -32,16 +31,16 @@ module.exports = function cyrillicToTranslit(config) {
     "ф": "f",
     "х": "x",
     "ц": "c",
-    "ч": "ch",
-    "ш": "sh",
-    "щ": "sh",
+    "ч": "ç",
+    "ш": "ş",
+    "щ": "ş",
     "ъ": "'",
     "ы": "i",
     "ь": "",
     "э": "e",
     "ю": "yu",
     "я": "ya",
-    "ў": "o'"
+    "ў": "ó"
   };
 
   if (_preset === "uz") {
@@ -60,7 +59,9 @@ module.exports = function cyrillicToTranslit(config) {
       "а" : "а",
       "b" : "б",
       "v" :  "в",
-      "g'" : "ғ", 
+      "c" : "ц",
+      "ç" : "ч",
+      "ǵ" : "ғ", 
       "g" :  "г",
       "d" :  "д",
       "e" :  "э",
@@ -84,12 +85,10 @@ module.exports = function cyrillicToTranslit(config) {
       "u" :  "у",
       "f" :  "ф",
       "h" :  "ҳ",
-      "c" :  "ц",
-      "ch" : "ч", 
-      "sh" : "ш",
+      "ş" : "ш",
       "yu" : "ю", 
       "ya" : "я", 
-      "o'" : "ў", 
+      "ó" : "ў", 
     });
   }
 
