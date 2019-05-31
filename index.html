@@ -47,26 +47,26 @@
         <textarea class="form-control shadow-textarea" id="source" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&#xf303;"></textarea>
 
         <div class="space-replacement input-group">
-          <span class="input-group-addon">Киритилаётган матн:</span>
+          <span class="input-group-addon">Source is:</span>
           <label class="btn btn-light">
-            <input type="radio" name="options" id="option-uzb" value="uzb" autocomplete="off" checked="checked">&nbsp;Кирилл алифбосида
+            <input type="radio" name="options" id="option-uzb" value="uzb" autocomplete="off" checked="checked">&nbsp;Cyrillic
           </label>
           <label class="btn btn-light">
-            <input type="radio" name="options" id="option-uz" value="uz" autocomplete="off">&nbsp;Lotin alifbosida
+            <input type="radio" name="options" id="option-uz" value="uz" autocomplete="off">&nbsp;English
           </label>
           <label class="btn btn-info" type="radio" name="clipboard" id="copier" value="copy" onclick="clipboard(document.getElementById('result').innerHTML)">
-              Натижани кўчириб олиш
+              Copy
             </label>
         </div>
 
         <div class="space-replacement input-group">
-          <span class="input-group-addon">Бўш жойни алмаштириш учун ёзинг:</span>
-          <input type="text" class="form-control text-center" id="space-rep" placeholder="[SPACE] ўрнига қўйиладиган ифода">
+          <span class="input-group-addon">You can replace space with:</span>
+          <input type="text" class="form-control text-center" id="space-rep" placeholder="instead [SPACE]">
           
         </div>
       </div>
       <div class="column col-sm-6">
-        <textarea class="form-control" id="result" readonly placeholder="Натижа:"></textarea>
+        <textarea class="form-control" id="result" readonly placeholder="Result is here:"></textarea>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@
       var string = document.getElementById("result");
       string.select();
       document.execCommand("copy");
-      humane.log("Натижа кўчириб олинди.");
+      humane.log("Text copied to clipboard");
       document.execCommand("unselect");
       };
   </script>
